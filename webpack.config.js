@@ -1,5 +1,7 @@
 // 文件路径
-const cusLoder = require('path').join(__dirname, './src/loader')
+const path = require('path')
+const cusLoder = path.join(__dirname, './src/loader.js')
+const yamlLoader = path.join(__dirname, './src/yaml-loader.js')
 
 module.exports = {
     entry: './test/index.js',
@@ -14,6 +16,14 @@ module.exports = {
                 use: [
                     {
                         loader: cusLoder
+                    }
+                ]
+            },
+            {
+                test: /\.yaml$/,
+                use: [
+                    {
+                        loader: yamlLoader
                     }
                 ]
             }

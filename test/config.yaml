@@ -1,0 +1,9 @@
+services:
+  framework:
+    component: fc
+    actions:
+      pre-deploy:
+        - run: npm install
+          path: ./code
+        - run: npm run build
+          path: ./code

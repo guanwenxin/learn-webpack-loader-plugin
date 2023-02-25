@@ -6,5 +6,9 @@
 
 // yaml
 
-import config from './config.yaml'
-console.log(config)
+// import config from './config.yaml'
+// console.log(config)
+function test() {
+    console.log()
+}
+test()

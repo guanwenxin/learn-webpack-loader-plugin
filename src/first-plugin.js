@@ -20,3 +20,14 @@ class ConsoleSomeInfo {
 
 // 导出
 module.exports = ConsoleSomeInfo
+
+
+//
+fn = [()=> {}, () => {}]
+let tmp = null
+for(let i = 0; i < fn.length; i++) {
+    tmp = fn[i](tmp)
+    if(!tmp) {
+        break;
+    }
+}
